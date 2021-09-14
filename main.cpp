@@ -1,8 +1,8 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <conio.h>
 #include <windows.h>
-#include "BinarySearchTree.h"
+#include "BinaryTreeSearch.hpp"
 
 typedef BinaryTreeSearch<std::string> Dictionary;
 enum    State
@@ -104,7 +104,7 @@ State processInput(Dictionary* dictionary, State programState, int userChoice, s
     std::cout << "Dictionary has been successfully generated.\n";
     system("pause");
     return ACTION_SELECTION;
-    
+
 
   case ACTION_SELECTION:
     switch(userChoice)
@@ -124,9 +124,9 @@ State processInput(Dictionary* dictionary, State programState, int userChoice, s
     std::cin >> word;
     std::cout << "\nGreat. Print a translation to it. Use ';' to add more than one.\n";
     std::cin >> translations;
-    std::cout << (dictionary->insert(word, translations) 
-      ? "The word has been successfully inserted.\n" 
-      : "Word was not added.\n");
+    std::cout << (dictionary->insert(word, translations)
+                  ? "The word has been successfully inserted.\n"
+                  : "Word was not added.\n");
     system("pause");
     return RETURN;
 

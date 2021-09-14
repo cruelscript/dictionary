@@ -2,8 +2,8 @@
 #define DICTIONARY_BINARYTREESEARCH_HPP
 
 #include <string>
-#include "List.h"
-#include "StackList.h"
+#include "List.hpp"
+#include "StackList.hpp"
 #include <algorithm>
 
 bool isEnglishWord(std::string word);
@@ -26,9 +26,9 @@ class BinaryTreeSearch
   };
   Node* root_;
 public:
-            BinaryTreeSearch();
+  BinaryTreeSearch();
   explicit  BinaryTreeSearch(unsigned int size);
-            ~BinaryTreeSearch();
+  ~BinaryTreeSearch();
   Node*     createOrderedTree(int begin, int end);
   bool      insert(std::istream& in);
   bool      insert(const T& word, const T& translation);

@@ -1,7 +1,7 @@
 #ifndef DICTIONARY_STACKLIST_H
 #define DICTIONARY_STACKLIST_H
 
-#include "Stack.h"
+#include "Stack.hpp"
 
 template <class T>
 class StackList : public Stack<T>
@@ -20,7 +20,7 @@ private:
     Node(const T& data, Node* next) :
       data_(data), next_(next)
     {}
-    T    data_;
+    T     data_;
     Node* next_;
   };
   Node* top_;
@@ -56,7 +56,7 @@ T StackList<T>::pop()
 {
   if (isEmpty())
     throw StackUnderflow();
- 
+
   T data = top_->data_;
   Node* temp = top_;
   top_ = top_->next_;

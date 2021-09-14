@@ -2,7 +2,6 @@
 #define DICTIONARY_LIST_HPP
 
 #include <sstream>
-#include <algorithm>
 
 template <class T>
 class List
